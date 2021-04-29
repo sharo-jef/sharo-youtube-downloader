@@ -1,0 +1,37 @@
+{
+    "name": "sharo-youtube-downloader",
+    "version": "1.0.0",
+    "description": "YouTube downloader for Node.js",
+    "bin": {
+        "yt": "index.js"
+    },
+    "scripts": {
+        "start": "node ."
+    },
+    "keywords": [],
+    "author": "sharo_jef",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.12.9",
+        "@babel/eslint-parser": "^7.12.1",
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/plugin-syntax-top-level-await": "^7.12.1",
+        "@babel/preset-env": "^7.12.1",
+        "@types/node": "^14.14.6",
+        "eslint": "^7.13.0"
+    },
+    "exports": {
+        "./": {
+            "default": "./index.js"
+        }
+    },
+    "type": "module",
+    "dependencies": {
+        "cli-progress": "^3.9.0",
+        "ffmpeg-static": "^4.3.0",
+        "log4js": "^6.3.0",
+        "yargs": "^16.2.0",
+        "youtube-command": "^1.0.10",
+        "ytdl-core": "^4.5.0"
+    }
+}

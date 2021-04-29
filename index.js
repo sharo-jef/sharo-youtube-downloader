@@ -7,7 +7,7 @@ import { Downloader } from './downloader.js';
 
 Config.load();
 
-const downloader = new Downloader(process.env.API_KEY);
+let downloader;
 
 yargs(hideBin(process.argv))
     .scriptName('yt')
@@ -45,5 +45,8 @@ yargs(hideBin(process.argv))
                 desc: 'set directory for output videos',
                 type: 'string',
             });
-    }, argv => downloader.download(argv))
+    }, argv => {
+        downloader = downloader ?? new Downloader(process.env.API_KEY);
+        downloader.download(argv);
+    })
     .argv;
